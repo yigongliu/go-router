@@ -2,13 +2,13 @@ go-router
 =========
 "router" is a Go package for remote peer-peer publish/subscribe message passing. We attach a send chan to an id in router to send msgs, and attach a recv chan to an id to recv msgs. If these 2 ids match, the msgs from send chan will be "routed" to recv chan, e.g.
 
-   rot := router.New(...)
-   chan1 := make(chan string)
-   chan2 := make(chan string)
-   chan3 := make(chan string)
-   rot.AttachSendChan(PathID("/sports/basketball"), chan1)
-   rot.AttachRecvChan(PathID("/sports/basketball"), chan2)
-   rot.AttachRecvChan(PathID("/sports/*"), chan3)
+         rot := router.New(...)
+         chan1 := make(chan string)
+         chan2 := make(chan string)
+         chan3 := make(chan string)
+         rot.AttachSendChan(PathID("/sports/basketball"), chan1)
+         rot.AttachRecvChan(PathID("/sports/basketball"), chan2)
+         rot.AttachRecvChan(PathID("/sports/*"), chan3)
 
 We can use integers, strings, pathnames, or structs as Ids in router (maybe regex ids and tuple id in future).
 
