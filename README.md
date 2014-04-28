@@ -47,4 +47,4 @@ Example.
         }
 
 
-(moved from https://code.google.com/p/go-router/)
+--- moved from https://code.google.com/p/go-router/ ---
