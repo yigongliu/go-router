@@ -18,33 +18,33 @@ In docs, there are more detailed Tutorial and UserGuide; also notes about an exp
 
 Installation.
 
-go get github.com/yigongliu/go-router/router
+        go get github.com/yigongliu/go-router/router
 
 Example.
 
-package main
+        package main
 
-import (
-       "fmt"
-       "github.com/yigongliu/go-router/router"
-)
+        import (
+               "fmt"
+               "github.com/yigongliu/go-router/router"
+        )
 
-func main() {
-     rot := router.New(router.StrID(), 32, router.BroadcastPolicy)
-     chin := make(chan int)
-     chout := make(chan int)
-     rot.AttachSendChan(router.StrID("A"), chin)
-     rot.AttachRecvChan(router.StrID("A"), chout)
-     go func() {
-        for i:=0; i<=10; i++ {
-            chin <- i;
+        func main() {
+             rot := router.New(router.StrID(), 32, router.BroadcastPolicy)
+             chin := make(chan int)
+             chout := make(chan int)
+             rot.AttachSendChan(router.StrID("A"), chin)
+             rot.AttachRecvChan(router.StrID("A"), chout)
+             go func() {
+                for i:=0; i<=10; i++ {
+                    chin <- i;
+                }
+                close(chin)
+             }()
+             for v := range chout {
+                 fmt.Println("recv ", v)
+             }
         }
-        close(chin)
-     }()
-     for v := range chout {
-         fmt.Println("recv ", v)
-     }
-}
 
 
 (moved from https://code.google.com/p/go-router/)
