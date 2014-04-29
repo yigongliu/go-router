@@ -9,7 +9,7 @@ import (
 	"errors"
 	"fmt"
 	"math/rand"
-	"code.google.com/p/go-router/trunk/router"
+	"github.com/yigongliu/go-router/router"
 	"strings"
 	"time"
 )

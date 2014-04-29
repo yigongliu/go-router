@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 	"net"
-	"code.google.com/p/go-router/trunk/router"
+	"github.com/yigongliu/go-router/router"
 )
 
 type Subject struct {

@@ -9,7 +9,7 @@ import (
 	"flag"
 	"fmt"
 	"net"
-	"code.google.com/p/go-router/trunk/router"
+	"github.com/yigongliu/go-router/router"
 	"strconv"
 	"time"
 )

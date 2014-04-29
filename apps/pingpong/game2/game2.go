@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"code.google.com/p/go-router/trunk/router"
+	"github.com/yigongliu/go-router/router"
 	"strconv"
 )
 
