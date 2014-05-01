@@ -14,11 +14,11 @@ We can use integers, strings, pathnames, or structs as Ids in router (maybe rege
 
 we can connect two routers at two diff machines so that chans attached to routerA can communicate with chans attached to routerB transparently.
 
-In wikis, there are more detailed [Tutorial](https://github.com/yigongliu/go-router/router/wiki/Tutorial) and [UserGuide](https://github.com/yigongliu/go-router/router/wiki/User-Guide); also [notes about an experiment to implement highly available services](https://github.com/yigongliu/go-router/router/wiki/a-dummy-server). There are some sample apps: [chat](https://github.com/yigongliu/go-router/router/tree/master/apps/chat), [ping-pong](https://github.com/yigongliu/go-router/router/tree/master/apps/pingpong), [dummy-server](https://github.com/yigongliu/go-router/router/tree/master/apps/dummyserver).
+In wikis, there are more detailed [Tutorial](https://github.com/yigongliu/go-router/wiki/Tutorial) and [UserGuide](https://github.com/yigongliu/go-router/wiki/User-Guide); also [notes about an experiment to implement highly available services](https://github.com/yigongliu/go-router/wiki/a-dummy-server). There are some sample apps: [chat](https://github.com/yigongliu/go-router/tree/master/apps/chat), [ping-pong](https://github.com/yigongliu/go-router/tree/master/apps/pingpong), [dummy-server](https://github.com/yigongliu/go-router/tree/master/apps/dummyserver).
 
 Installation.
 
-        go get github.com/go-router/router
+        go get github.com/yigongliu/go-router/router
 
 Example.
 
@@ -26,7 +26,7 @@ Example.
 
         import (
                "fmt"
-               "github.com/go-router/router"
+               "github.com/yigongliu/go-router/router"
         )
 
         func main() {
@@ -46,7 +46,7 @@ Example.
              }
         }
 
-App [ping-pong](https://github.com/yigongliu/go-router/router/tree/master/apps/pingpong) shows how router allows pinger/ponger goroutines remain unchanged while their connections change from local channels, to routers connected thru unix domain sockets or tcp sockets.
+App [ping-pong](https://github.com/yigongliu/go-router/tree/master/apps/pingpong) shows how router allows pinger/ponger goroutines remain unchanged while their connections change from local channels, to routers connected thru unix domain sockets or tcp sockets.
 
 
 --- moved from https://code.google.com/p/go-router/ ---
